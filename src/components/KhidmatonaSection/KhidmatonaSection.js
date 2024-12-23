@@ -44,8 +44,8 @@ const services = [
 
 const KhidmatonaSection = () => {
   return (
-    <section className="khidmatona-section" id="khidmatona">
-      <h2 className="section-title">خدماتنا</h2>
+    <section className="khidmatona-section" id="ourServices">
+      <h2 className="section-title2">خدماتنا</h2>
       <div className="services-container">
         {services.map((service, index) => (
           <ServiceCard key={index} title={service.title} points={service.points} />

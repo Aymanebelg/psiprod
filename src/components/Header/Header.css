@@ -1,25 +1,123 @@
 /* src/components/Header/Header.css */
 
+/* Global Box-Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .header {
   background-color: #000000;
-  padding: 20px 50px; /* Reduced padding for better fit */
-  font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
-  position: fixed; /* Make the header fixed */
-  top: 0; /* Position it at the top */
-  left: 0; /* Align to the left */
-  width: 100%; /* Full width */
-  z-index: 1000; /* Ensure it stays above other elements */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+  padding: 20px 50px;
+  font-family: 'Alexandria', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1200px; /* Optional: Limit max width */
-  margin: 0 auto; /* Center the container */
+  justify-content: space-between; /* Distribute space between left, center, right */
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
 }
 
+/* Left, Center, and Right Sections */
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-center {
+  flex: 1;
+  justify-content: center; /* Center the logo */
+}
+
+.header-right {
+  justify-content: flex-end;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+  display: none; /* Hidden by default (visible on mobile) */
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 35px;
+  cursor: pointer;
+  z-index: 1001; /* Above the header */
+}
+
+/* Logo */
+.logo {
+  position: relative; /* Enable z-index */
+  z-index: 1002;      /* Higher than nav-menu's z-index */
+  height: 50px;
+  max-width: 100%;
+  height: 50px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  position: fixed; /* Ensure it covers the viewport */
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 100px; /* Space from top */
+  z-index: 1000;
+  
+  /* Initially hidden */
+  opacity: 0;
+  transform: translateY(-100%);
+  visibility: hidden;
+  
+  /* Transition for smooth animation */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.nav-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #dddddd;
+}
+
+/* English Button Styles */
 .english-button {
   background-color: transparent;
   border: 0.5px solid #ffffff90;
@@ -36,55 +134,193 @@
   color: #000000;
 }
 
-.nav-menu {
-  flex-grow: 1;
-  text-align: center;
+/* English Button for Desktop */
+.desktop-button {
+  display: block; /* Visible on desktop */
+  margin-left: 20px;
 }
 
-.nav-menu ul {
-  list-style: none;
-  display: flex;
+/* English Button for Mobile */
+.mobile-button {
+  display: none; /* Hidden by default */
+}
+
+/* Social Media Icons in Header */
+.mobile-social-media {
+  display: none; /* Hidden on desktop */
+  margin-top: 20px; /* Space from English button */
+}
+
+.mobile-social-media a {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  gap: 30px;
-  padding: 0;
-  margin: 0;
+  width: 30px; /* Increased size for better touch targets */
+  height: 30px;
+  background-color: #ffffff; /* White circular background */
+  border-radius: 50%;
+  color: #000000; /* Icon color (black) */
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  margin: 0 5px; /* Spacing between icons */
 }
 
-.nav-menu a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 15px;
+.mobile-social-media a:hover {
+  background-color: #000000; /* Black background on hover */
+  color: #ffffff; /* White icon color on hover */
+  transform: scale(1.1); /* Slight scale on hover */
 }
 
-.nav-menu a:hover {
-  text-decoration: underline;
+/* Overlay for the full-screen menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  
+  /* Initially hidden */
+  opacity: 0;
+  visibility: hidden;
+  
+  /* Transition for smooth animation */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-.logo {
-  height: 50px; /* Adjust as needed */
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Active state for nav-menu when menu is open (mobile) */
+/* Removed display: flex since it's always flex */
+/* Added position fixed and transitions above */
+
+.nav-menu.active {
+  /* Already handled above */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+
   .header-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 30px; /* Adjust padding for smaller screens */
+    justify-content: space-between; /* Space between hamburger and logo */
+  }
+
+  /* Show hamburger icon on mobile */
+  .menu-icon {
+    display: block;
+    order: 1; /* Ensure it's first */
+  }
+
+  /* Position the logo on the right */
+  .header-center {
+    order: 2;
+    justify-content: flex-end; /* Align logo to the right */
+    flex: none; /* Prevent stretching */
+    flex-grow: 1; /* Allow taking up remaining space */
+  }
+
+  .logo {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+  }
+
+  /* Navigation Menu */
+  .nav-menu {
+    /* Remove display: none; */
+    /* Already set to position fixed and hidden by default */
   }
 
   .nav-menu ul {
     flex-direction: column;
     gap: 15px;
-    width: 100%; /* Make navigation full width */
+  }
+
+  .nav-menu a {
+    font-size: 18px;
+  }
+
+  .english-button-container {
+    margin-top: 20px; /* Space before English button */
   }
 
   .english-button {
-    margin-top: 15px; /* Add spacing above the button */
-    width: 100%; /* Make button full width */
-    text-align: center; /* Center text */
+    padding: 8px 25px;
+    font-size: 20px;
   }
 
-  .logo {
-    margin-top: 20px;
+  .desktop-button {
+    display: none; /* Hide on mobile */
+  }
+
+  /* Mobile English Button */
+  .mobile-button {
+    display: block; /* Show on mobile */
+    margin-top: 20px; /* Optional spacing */
+  }
+
+  /* Show social media icons in mobile menu */
+  .mobile-social-media {
+    display: flex; /* Show on mobile */
+    margin-top: 150px; /* Space above social icons */
+  }
+}
+
+/* Center the logo on desktop */
+@media (min-width: 769px) {
+  .header-container {
+    position: relative;
+  }
+
+  .header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+  }
+
+  .menu-icon {
+    display: none; /* Hide hamburger on desktop */
+  }
+
+  .nav-menu {
+    display: flex; /* Show navigation on desktop */
+    
+    /* Override the fixed position for desktop */
+    position: static;
+    height: auto;
+    flex-direction: row;
+    background-color: transparent;
+    padding-top: 0;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  .nav-menu ul {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .nav-menu a {
+    font-size: 15px;
+  }
+
+  .desktop-button {
+    display: block; /* Ensure it's visible */
+  }
+
+  .mobile-button {
+    display: none; /* Hide mobile button */
+  }
+
+  .overlay {
+    display: none; /* Hide overlay on desktop */
   }
 }

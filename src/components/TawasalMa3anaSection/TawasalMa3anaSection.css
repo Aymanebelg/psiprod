@@ -7,7 +7,7 @@
     font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
   }
   
-  .section-title {
+  .section-title4 {
     text-align: right;
     font-size: 32px;
     margin-bottom: 100px;
@@ -84,6 +84,19 @@
   
   /* Mobile Devices */
   @media (max-width: 768px) {
+    .tawasal-ma3ana-section {
+        background-color: #000000; /* Black background */
+        color: #ffffff;
+        padding: 20px; /* Optional: Reduce padding on mobile for better spacing */
+        font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+      }
+
+
+    .section-title4 {
+        font-size: 22px;
+        margin-top:90px;
+        margin-bottom: 40px;
+      }
     .contact-title span {
       font-size: 18px;
     }
@@ -93,8 +106,7 @@
       height: 35px;
     }
   }
-  /* src/components/TawasalMa3anaSection/TawasalMa3anaSection.css */
-
+  
 .contact-details {
     direction: ltr; /* Set text direction to Left-to-Right */
     text-align: right; /* Align text to the left for consistency */

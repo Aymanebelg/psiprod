@@ -12,7 +12,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 50px; /* Applied only on desktop */
 }
 
 .main-image {
@@ -20,8 +20,25 @@ main {
   height: auto;
   border-radius: 10px; /* Optional: Adds rounded corners */
 }
+
 /* src/index.css or src/App.css */
 
 html {
   scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 100px; /* Adjust based on header height */
+}
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  main {
+    padding: 20px; /* Remove padding on mobile */
+  }
+
+  /* Optional: Adjust main image styles for mobile if necessary */
+  .main-image {
+    border-radius: 5px; /* Example: Less rounded corners on mobile */
+  }
+
+  /* If you have additional styles specific to mobile, add them here */
 }

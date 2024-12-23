@@ -5,7 +5,7 @@
     border-radius: 15px; /* Large rounded corners */
     padding: 20px;
     flex: 1;
-    min-width: 220px;
+    min-width: 150px;
     max-width: 23%;
     box-sizing: border-box; /* Ensures padding and border are included in the total width */
     transition: transform 0.3s, box-shadow 0.3s;
@@ -19,7 +19,7 @@
   
   .service-title {
     font-size: 20px;
-    font-weight: 700; /* Bold */
+    font-weight: 700;
     margin-bottom: 15px;
   }
   
@@ -35,16 +35,23 @@
     font-weight: 300; /* Normal */
   }
   
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .service-card {
-      max-width: 48%;
-    }
-  }
+
   
   @media (max-width: 768px) {
     .service-card {
       max-width: 100%;
+      
     }
+    .service-title {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .service-list li {
+        margin-bottom: 17px;
+        font-size:12px;
+        font-weight: 300; /* Normal */
+      }
   }
   

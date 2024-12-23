@@ -32,3 +32,38 @@
     color: #cccccc;
   }
   
+    
+  @media (max-width: 768px) {
+    .team-card {
+        border-radius: 15px; /* Rounded corners */
+        padding: 9px;
+        text-align: right;
+        transition: transform 0.3s, box-shadow 0.3s;
+        font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+      }
+      
+      .team-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      
+      .team-photo {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0px;
+      }
+      
+      .team-name {
+        font-size: 12px;
+        font-weight: 700; /* Bold for the name */
+        margin: 10px 0 5px 0;
+        color: #ffffff;
+      }
+      
+      .team-position {
+        font-size: 11px;
+        font-weight: 400; /* Normal weight for the position */
+        color: #cccccc;
+      }
+  }
+  

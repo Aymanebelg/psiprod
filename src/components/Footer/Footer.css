@@ -59,16 +59,29 @@
   /* Mobile Devices */
   @media (max-width: 768px) {
     .footer-container {
-      flex-direction: column;
+      flex-direction: row;
       text-align: center;
+      
+      
     }
   
-    .social-media {
-      margin-bottom: 15px;
-    }
+
   
     .footer-logo img {
-      width: 100px;
+      width: 120px;
     }
+
+    .social-media a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        background-color: #ffffff; /* White circular background */
+        border-radius: 50%;
+        color: #000000; /* Icon color (black) */
+        font-size: 13px;
+        transition: background-color 0.3s, color 0.3s, transform 0.3s;
+      }
   }
   

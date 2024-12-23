@@ -82,8 +82,8 @@ const teamMembers = [
 
 const Fari9onaSection = () => {
   return (
-    <section className="fari9ona-section" id="fari9ona">
-      <h2 className="section-title">فريقنا</h2>
+    <section className="fari9ona-section" id="ourTeam">
+      <h2 className="section-title3">فريقنا</h2>
       <div className="team-container">
         {teamMembers.map((member, index) => (
           <TeamCard

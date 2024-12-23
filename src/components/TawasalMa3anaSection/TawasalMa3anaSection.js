@@ -5,8 +5,8 @@ import ReactCountryFlag from "react-country-flag";
 
 const TawasalMa3anaSection = () => {
   return (
-    <section className="tawasal-ma3ana-section" id="tawasalma3ana">
-      <h2 className="section-title">تواصل معنا</h2>
+    <section className="tawasal-ma3ana-section" id="contactUs">
+      <h2 className="section-title4">تواصل معنا</h2>
 
       <div className="contact-container">
         {/* Saudi Arabia Contact Card */}

@@ -6,17 +6,29 @@
     padding: 50px;
     text-align: right; /* Align text to the right for Arabic */
     font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+}
 
-  }
-  
-  .section-title {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .section-paragraph {
+.section-title1 {
+    font-size: 32px; /* Default font size for desktop */
+}
+
+.section-paragraph {
     font-size: 15px;
     line-height: 1.6;
     font-weight: 300;
-  }
-  
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+    .nabda3ana-section {
+        padding: 20px; /* Optional: Reduce padding on mobile for better spacing */
+    }
+
+    .section-title1 {
+        font-size: 25px; /* Reduced font size for mobile */
+    }
+
+    .section-paragraph {
+        font-size: 14px; /* Optional: Slightly adjust paragraph font size */
+    }
+}
