@@ -5,6 +5,7 @@
   min-height: 100vh;
   direction: rtl; /* Ensures all text flows right-to-left */
   font-family: 'Arial, sans-serif'; /* Choose a font that supports Arabic characters */
+  padding-top: 80px; /* Adjust this value to match the header's height */
 }
 
 main {
