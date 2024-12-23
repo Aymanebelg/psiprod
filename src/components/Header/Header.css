@@ -120,7 +120,7 @@
 /* English Button Styles */
 .english-button {
   background-color: transparent;
-  border: 0.5px solid #ffffff90;
+  border: 1px solid #ffffff;
   color: #ffffff;
   border-radius: 50px;
   padding: 10px 20px;
