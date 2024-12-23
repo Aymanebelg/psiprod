@@ -1,0 +1,76 @@
+/* src/Header.css */
+
+.header {
+    background-color: #000000;
+    padding: 40px 50px;
+    font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .english-button {
+    background-color: transparent;
+    border: 0.5px solid #ffffff90;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .english-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .nav-menu {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  .nav-menu a:hover {
+    text-decoration: underline;
+  }
+  
+  .logo {
+    height: 50px; /* Adjust as needed */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .logo {
+      margin-top: 20px;
+    }
+  }
+  

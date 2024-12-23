@@ -1,0 +1,22 @@
+/* src/index.css or src/App.css */
+
+/* If you used @import, ensure it's at the top */
+/* @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&display=swap'); */
+
+html {
+    scroll-behavior: smooth; /* Retain smooth scrolling if using CSS-based method */
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alexandria', sans-serif; /* Set Alexandria as the default font */
+    background-color: #000000;
+    color: #ffffff;
+    direction: rtl; /* Ensures all text flows right-to-left */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alexandria', sans-serif; /* Ensure headings use Alexandria */
+  }
+  

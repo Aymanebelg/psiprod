@@ -1,0 +1,74 @@
+/* src/components/Footer/Footer.css */
+
+.footer {
+    background-color: #000000; /* Black background */
+    padding: 50px 50px;
+    font-family: 'Alexandria', sans-serif; /* Consistent typography */
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Social Media Icons */
+  .social-media {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .social-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff; /* White circular background */
+    border-radius: 50%;
+    color: #000000; /* Icon color (black) */
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  
+  .social-media a:hover {
+    background-color: #000000; /* Example hover background color (gold) */
+    color: #ffffff; /* Icon color on hover */
+  }
+  
+  /* Footer Logo */
+  .footer-logo img {
+    width: 180px; /* Adjust size as needed */
+    height: auto;
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .footer {
+      padding: 20px 30px;
+    }
+  
+    .footer-logo img {
+      width: 120px;
+    }
+  }
+  
+  /* Mobile Devices */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .social-media {
+      margin-bottom: 15px;
+    }
+  
+    .footer-logo img {
+      width: 100px;
+    }
+  }
+  

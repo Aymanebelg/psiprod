@@ -1,0 +1,50 @@
+/* src/components/ServiceCard/ServiceCard.css */
+
+.service-card {
+    background-color: #151515; /* Gray background */
+    border-radius: 15px; /* Large rounded corners */
+    padding: 20px;
+    flex: 1;
+    min-width: 220px;
+    max-width: 23%;
+    box-sizing: border-box; /* Ensures padding and border are included in the total width */
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-title {
+    font-size: 20px;
+    font-weight: 700; /* Bold */
+    margin-bottom: 15px;
+  }
+  
+  .service-list {
+    list-style: disc;
+    padding-right: 20px; /* For proper alignment in RTL */
+    font-weight: 400; /* Normal */
+  }
+  
+  .service-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 300; /* Normal */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .service-card {
+      max-width: 48%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .service-card {
+      max-width: 100%;
+    }
+  }
+  

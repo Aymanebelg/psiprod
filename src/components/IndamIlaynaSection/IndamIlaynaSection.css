@@ -1,0 +1,27 @@
+/* src/components/IndamIlaynaSection/IndamIlaynaSection.css */
+
+.indam-ilayna-section {
+    background-color: #000000; /* Black background */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+  }
+  
+  .indam-button {
+    background-color: transparent;
+    border: 0.5px solid #ffffff90;
+    color: #ffffff;
+    border-radius: 50px; /* Rounded full */
+    padding: 15px 60px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .indam-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
