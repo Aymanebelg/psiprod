@@ -239,7 +239,8 @@
 
   .nav-menu ul {
     flex-direction: column;
-    gap: 15px;
+    gap: 40px;
+
   }
 
   .nav-menu a {
