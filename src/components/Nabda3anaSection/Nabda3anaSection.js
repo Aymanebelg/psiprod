@@ -1,13 +1,16 @@
 // src/components/Nabda3anaSection/Nabda3anaSection.js
 import React from 'react';
 import './Nabda3anaSection.css';
+import { useTranslation } from 'react-i18next';
 
 const Nabda3anaSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="nabda3ana-section" id="aboutUs">
-      <h2 className="section-title1">نبذة عنا</h2>
+      <h2 className="section-title1">{t('nabda3anaSection.title')}</h2>
       <p className="section-paragraph">
-        هي شركة ذات خدمات متعددة متخصصة في التصوير والإنتاج الفني والتوزيع الموسيقي والصوتي، توفر خدمات إبداعية ومتكاملة مع تقديم حلول مبتكرة باستخدام أحدث تقنيات التصوير كالدرون لضمان تقديم تجارب بصرية فريدة ومؤثرة، حيث تهتم بخدمات الإبداع والابتكار في كل مرحلة من مراحل الإنتاج، بدءًا من الفكرة حتى التنفيذ النهائي.
+        {t('nabda3anaSection.paragraph')}
       </p>
     </section>
   );

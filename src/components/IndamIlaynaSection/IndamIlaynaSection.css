@@ -1,54 +1,74 @@
 /* src/components/IndamIlaynaSection/IndamIlaynaSection.css */
 
 .indam-ilayna-section {
-    background-color: #000000; /* Black background */
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+  background-color: #000000; /* Black background */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+  padding: 100px 50px; /* Increased top padding to account for fixed header */
+  text-align: start; /* Use logical property instead of 'right' */
+}
+
+.indam-button {
+  background-color: transparent;
+  border: 0.5px solid #ffffff90;
+  color: #ffffff;
+  border-radius: 50px; /* Fully rounded corners */
+  padding: 15px 60px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center; /* Center the button text */
+}
+
+.indam-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Responsive Design */
+
+/* Tablets and Below */
+@media (max-width: 1024px) {
+  .indam-ilayna-section {
+      padding: 80px 30px; /* Adjust padding for tablets */
+  }
+
+  .indam-button {
+      padding: 12px 50px;
+      font-size: 22px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .indam-ilayna-section {
+      background-color: #000000; /* Black background */
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+      padding: 60px 20px; /* Adjust padding for mobile */
+      text-align: start; /* Use logical property */
   }
   
   .indam-button {
-    background-color: transparent;
-    border: 0.5px solid #ffffff90;
-    color: #ffffff;
-    border-radius: 50px; /* Rounded full */
-    padding: 15px 60px;
-    font-size: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+      background-color: transparent;
+      border: 0.5px solid #ffffff90;
+      color: #ffffff;
+      border-radius: 50px; /* Fully rounded corners */
+      padding: 10px 40px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      text-align: center; /* Center the button text */
   }
   
   .indam-button:hover {
-    background-color: #ffffff;
-    color: #000000;
+      background-color: #ffffff;
+      color: #000000;
   }
-      
-  @media (max-width: 768px) {
-    .indam-ilayna-section {
-        background-color: #000000; /* Black background */
-        color: #ffffff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
-      }
-      
-      .indam-button {
-        background-color: transparent;
-        border: 0.5px solid #ffffff90;
-        color: #ffffff;
-        border-radius: 50px; /* Rounded full */
-        padding: 10px 60px;
-        font-size: 18px;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-      }
-      
-      .indam-button:hover {
-        background-color: #ffffff;
-        color: #000000;
-      }
-          
-  }
+}

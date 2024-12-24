@@ -2,11 +2,19 @@
 import React from 'react';
 import './TawasalMa3anaSection.css';
 import ReactCountryFlag from "react-country-flag";
+import { useTranslation } from 'react-i18next';
 
 const TawasalMa3anaSection = () => {
+  const { t, i18n } = useTranslation();
+
+  // Function to format phone numbers by removing spaces and hyphens
+  const formatPhoneNumber = (phone) => {
+    return phone.replace(/[^0-9+]/g, '');
+  };
+
   return (
     <section className="tawasal-ma3ana-section" id="contactUs">
-      <h2 className="section-title4">تواصل معنا</h2>
+      <h2 className="section-title4">{t('contactUsSection.title')}</h2>
 
       <div className="contact-container">
         {/* Saudi Arabia Contact Card */}
@@ -21,16 +29,36 @@ const TawasalMa3anaSection = () => {
                   height: '100%',
                   objectFit: 'cover',
                 }}
-                title="المملكة العربية السعودية"
-                aria-label="علم المملكة العربية السعودية"
+                title={t('contactUsSection.saudiArabia.flagTitle')}
+                aria-label={t('contactUsSection.saudiArabia.flagAriaLabel')}
               />
             </div>
-            <span>المملكة العربية السعودية</span>
+            <span>{t('contactUsSection.saudiArabia.title')}</span>
           </div>
           <div className="contact-content">
-            <p>7742, سلمة بنت ثابت، 3814 حي المنار، جدة المملكة العربية السعودية.</p>
-            <p className="contact-details">+966 536-353136 – info@psiprod.sa</p>
-            <p>السجل التجاري : 704251958</p>
+            <p>{t('contactUsSection.saudiArabia.address')}</p>
+            <p className="contact-details">
+              {i18n.language === 'ar' ? (
+                <>
+                  <a href={`tel:${formatPhoneNumber(t('contactUsSection.saudiArabia.phone'))}`}>
+                    {t('contactUsSection.saudiArabia.phone')}
+                  </a>
+                  <a href={`mailto:${t('contactUsSection.saudiArabia.email')}`}>
+                    {t('contactUsSection.saudiArabia.email')}
+                  </a>
+                </>
+              ) : (
+                <>
+                  <a href={`mailto:${t('contactUsSection.saudiArabia.email')}`}>
+                    {t('contactUsSection.saudiArabia.email')}
+                  </a>
+                  <a href={`tel:${formatPhoneNumber(t('contactUsSection.saudiArabia.phone'))}`}>
+                    {t('contactUsSection.saudiArabia.phone')}
+                  </a>
+                </>
+              )}
+            </p>
+            <p>{t('contactUsSection.saudiArabia.commercialRegister')}</p>
           </div>
         </div>
 
@@ -46,16 +74,36 @@ const TawasalMa3anaSection = () => {
                   height: '100%',
                   objectFit: 'cover',
                 }}
-                title="المملكة المغربية"
-                aria-label="علم المملكة المغربية"
+                title={t('contactUsSection.morocco.flagTitle')}
+                aria-label={t('contactUsSection.morocco.flagAriaLabel')}
               />
             </div>
-            <span>المملكة المغربية</span>
+            <span>{t('contactUsSection.morocco.title')}</span>
           </div>
           <div className="contact-content">
-            <p>46, الطابق الثاني، شارع الزرقطوني، حي المعاريف، الدار البيضاء 20500 –– المغرب</p>
-            <p className="contact-details">+212 661-488052 – info@psiprod.ma</p>
-            <p>السجل التجاري : 392243</p>
+            <p>{t('contactUsSection.morocco.address')}</p>
+            <p className="contact-details">
+              {i18n.language === 'ar' ? (
+                <>
+                  <a href={`tel:${formatPhoneNumber(t('contactUsSection.morocco.phone'))}`}>
+                    {t('contactUsSection.morocco.phone')}
+                  </a>
+                  <a href={`mailto:${t('contactUsSection.morocco.email')}`}>
+                    {t('contactUsSection.morocco.email')}
+                  </a>
+                </>
+              ) : (
+                <>
+                  <a href={`mailto:${t('contactUsSection.morocco.email')}`}>
+                    {t('contactUsSection.morocco.email')}
+                  </a>
+                  <a href={`tel:${formatPhoneNumber(t('contactUsSection.morocco.phone'))}`}>
+                    {t('contactUsSection.morocco.phone')}
+                  </a>
+                </>
+              )}
+            </p>
+            <p>{t('contactUsSection.morocco.commercialRegister')}</p>
           </div>
         </div>
       </div>

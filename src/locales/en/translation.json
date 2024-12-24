@@ -1,0 +1,127 @@
+{
+    "header": {
+      "aboutUs": "About Us",
+      "ourServices": "Our Services",
+      "ourTeam": "Our Team",
+      "joinUs": "Join Us",
+      "contactUs": "Contact Us",
+      "switchTo": "العربية"  
+    },
+    "mainImageAlt": "Main",
+    "sections": {
+      "nabda3ana": "About Us Section",
+      "khidmatona": "Our Services Section",
+      "fari9ona": "Our Team Section",
+      "indamIlayna": "Join Us Section",
+      "tawasalMa3ana": "Contact Us Section"
+    },
+    "footer": {
+      "rightsReserved": "All rights reserved."
+    },
+    "nabda3anaSection": {
+      "title": "About Us",
+      "paragraph": "We are a multi-service company specializing in photography, artistic production, and musical and audio distribution. We provide creative and comprehensive services, offering innovative solutions using the latest photography techniques such as drones to ensure unique and impactful visual experiences. We focus on creativity and innovation at every stage of production, from the initial idea to the final execution."
+    },
+    "khidmatonaSection": {
+    "title": "Our Services",
+    "services": [
+      {
+        "title": "Photography and Video Production",
+        "points": [
+          "Photography of advertisements, promotional videos, and short films.",
+          "Content production for social media platforms.",
+          "Live broadcasting and event recording services.",
+          "Image processing and graphic design for digital print."
+        ]
+      },
+      {
+        "title": "Music Recording and Production",
+        "points": [
+          "Song and podcast recording.",
+          "Background music production and musical distribution.",
+          "Audio effects preparation for games and digital projects.",
+          "Music remixing services."
+        ]
+      },
+      {
+        "title": "Film and Documentary Production",
+        "points": [
+          "Production of feature films and documentaries.",
+          "Video editing and scriptwriting services.",
+          "Production of training and educational video clips.",
+          "Editing and special effects preparation for films."
+        ]
+      },
+      {
+        "title": "Festival and Event Organization",
+        "points": [
+          "Organizing musical concerts and cultural events.",
+          "Event management from planning to execution.",
+          "Providing design and artistic direction services for events.",
+          "Producing and preparing promotional advertisements for festivals."
+        ]
+      }
+    ]
+  },
+  "fari9onaSection": {
+    "title": "Our Team",
+    "positions": {
+      "chairmanOfTheBoard": "Chairman of the Board",
+      "ceo": "Chief Executive Officer",
+      "chiefOperatingOfficer": "Chief Operating Officer",
+      "hrManager": "Human Resources Manager",
+      "projectManager": "Project Manager",
+      "technicalManager": "Technical Manager",
+      "accountant": "Accountant",
+      "productionCommunicationManager": "Production and Communication Manager",
+      "creativeDesigner": "Creative Designer",
+      "graphicDesigner": "Graphic Designer",
+      "technicalAssistant": "Technical Assistant",
+      "technician": "Technician"
+    },
+    "teamMembers": {
+      "walidAlAsiri": "Walid AL-ASIRI",
+      "abdulSamadBinBu": "Abd Samad BENBOU",
+      "aminaBinBu": "Amina BENBOU",
+      "soumiyaTakiya": "Soumiya TAGUIYA",
+      "abdulRahimBinBu": "Abd Rahim BENBOU",
+      "abdulSamadTakiya": "Abd Samad TAGUIYA",
+      "zakariaAlGhuzai": "Zakaria ALGHAZAI",
+      "jawadAlHadin": "Jawad ALHADIN",
+      "ayoubQarawash": "Ayoub QARWACH",
+      "saadDahnon": "Saad DAHNONE",
+      "abdulHadiAlBahri": "Abd Hadi ALBAHRI",
+      "adilAlMiani": "Adil ALMIANI"
+    }
+
+  },
+  "indamIlaynaSection": {
+    "buttonText": "Join Us"
+  },
+  "contactUsSection": {
+    "title": "Contact Us",
+    "saudiArabia": {
+      "title": "Saudi Arabia",
+      "address": "7742, Salma bint Thabet, 3814 Al-Manar Neighborhood, Jeddah, Saudi Arabia.",
+      "phone": "+966 536-353136",
+      "email": "info@psiprod.sa",
+      "commercialRegister": "Commercial Register: 704251958",
+      "flagTitle": "Flag of Saudi Arabia",
+      "flagAriaLabel": "Saudi Arabia Flag"
+    },
+    "morocco": {
+      "title": "Morocco",
+      "address": "46, Second Floor, Zarqtoni Street, Ma'arif Neighborhood, Casablanca 20500 – Morocco",
+      "phone": "+212 661-488052",
+      "email": "info@psiprod.ma",
+      "commercialRegister": "Commercial Register: 392243",
+      "flagTitle": "Flag of Morocco",
+      "flagAriaLabel": "Morocco Flag"
+    }
+  },
+  "mainSection": {
+    "line1": "Elham Al-Aql Artistic Production Company",
+    "line2": "Coming Soon ... in Saudi Arabia"
+  }
+  }
+  

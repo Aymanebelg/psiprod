@@ -1,128 +1,161 @@
 /* src/components/TawasalMa3anaSection/TawasalMa3anaSection.css */
 
 .tawasal-ma3ana-section {
-    background-color: #000000; /* Black background */
-    color: #ffffff;
-    padding: 100px 50px;
-    font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
-  }
-  
-  .section-title4 {
-    text-align: right;
-    font-size: 32px;
-    margin-bottom: 100px;
-    font-weight: 700;
-  }
-  
-  .contact-container {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
+  background-color: #000000; /* Black background */
+  color: #ffffff;
+  padding: 100px 50px;
+  font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+}
+
+.section-title4 {
+  text-align: start; /* Aligns to start based on direction */
+  font-size: 32px;
+  margin-bottom: 100px;
+  font-weight: 700;
+}
+
+.contact-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Contact Card Styling */
+.contact-card {
+  background-color: rgba(255, 255, 255, 0.1); /* #FFFFFF10 */
+  border-radius: 15px;
+  padding: 14px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 30%;
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s; /* Hover effects */
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.flag-container {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag-container svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-title span {
+  font-size: 20px;
+  font-weight: 700; 
+  padding-left:10px;
+}
+
+/* Contact Content Styling */
+.contact-content p {
+  font-size: 16px;
+  font-weight: 300; /* Normal weight for content */
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Specific Styling for Contact Details */
+.contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Default for LTR */
+  text-align: start; /* Aligns to start based on direction */
+  font-size: 16px;
+  font-weight: 300; /* Normal weight for content */
+  margin-bottom: 10px;
+  line-height: 1.3;
+  gap: 5px; /* Space between items */
+  text-decoration: none;
+
+}
+
+/* Direction-Based Flex Direction */
+[dir="rtl"] .contact-details {
+  flex-direction: row-reverse; /* Reverse the order in RTL */
+  justify-content: flex-end; /* Align items to the right */
+}
+
+[dir="ltr"] .contact-details {
+  flex-direction: row; /* Standard order in LTR */
+  justify-content: flex-start; /* Align items to the left */
+}
+
+
+
+
+
+/* Styling for Links within Contact Details */
+.contact-details a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-details a:hover {
+  color: #cccccc;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 1024px) {
   .contact-card {
-    background-color: rgba(255, 255, 255, 0.1); /* #FFFFFF10 */
-    border-radius: 15px;
-    padding: 20px;
-    flex: 1;
-    min-width: 300px;
-    max-width: 30%;
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s; /* Hover effects */
-  }
-  
-  .contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .contact-title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-  
-  .flag-container {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-left: 10px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .flag-container svg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .contact-title span {
-    font-size: 20px;
-    font-weight: 700; /* Bold for country name */
-  }
-  
-  .contact-content p {
-    font-size: 16px;
-    font-weight: 300; /* Normal weight for content */
-    margin-bottom: 10px;
-    line-height: 1.4;
-  }
-  
-  /* Responsive Design */
-  
-  /* Tablets */
-  @media (max-width: 1024px) {
-    .contact-card {
       max-width: 100%;
-    }
   }
-  
-  /* Mobile Devices */
-  @media (max-width: 768px) {
-    .tawasal-ma3ana-section {
-        background-color: #000000; /* Black background */
-        color: #ffffff;
-        padding: 20px; /* Optional: Reduce padding on mobile for better spacing */
-        font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
-      }
+}
 
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .tawasal-ma3ana-section {
+      background-color: #000000; /* Black background */
+      color: #ffffff;
+      padding: 20px; /* Reduced padding for mobile */
+      font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+  }
 
-    .section-title4 {
-        font-size: 22px;
-        margin-top:90px;
-        margin-bottom: 40px;
-      }
-    .contact-title span {
+  .section-title4 {
+      font-size: 22px;
+      margin-top: 90px;
+      margin-bottom: 40px;
+  }
+
+  .contact-title span {
       font-size: 18px;
-    }
-  
-    .flag-container {
+  }
+
+  .flag-container {
       width: 35px;
       height: 35px;
-    }
   }
-  
-.contact-details {
-    direction: ltr; /* Set text direction to Left-to-Right */
-    text-align: right; /* Align text to the left for consistency */
-    font-size: 16px;
-    font-weight: 300; /* Normal weight for content */
-    margin-bottom: 10px;
-    line-height: 1.3;
+
+  /* Adjust contact-content p for better readability on mobile */
+  .contact-content p {
+      font-size: 14px;
   }
-  
-  .contact-details a {
-    color: #ffffff;
-    text-decoration: underline;
-    transition: color 0.3s;
+
+  .contact-details {
+      font-size: 14px;
   }
-  
-  .contact-details a:hover {
-    color: #cccccc;
-  }
-  
+}

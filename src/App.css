@@ -3,7 +3,6 @@
 .App {
   background-color: #000000;
   min-height: 100vh;
-  direction: rtl; /* Ensures all text flows right-to-left */
   font-family: 'Arial, sans-serif'; /* Choose a font that supports Arabic characters */
   padding-top: 80px; /* Adjust this value to match the header's height */
 }
@@ -15,30 +14,101 @@ main {
   padding: 50px; /* Applied only on desktop */
 }
 
+.main-image-container {
+  position: relative; /* To position overlay-text absolutely within this container */
+  max-width: 100%;
+}
+
 .main-image {
   max-width: 100%;
   height: auto;
   border-radius: 10px; /* Optional: Adds rounded corners */
 }
 
-/* src/index.css or src/App.css */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Transition for smooth alignment change */
+  transition: all 0.3s ease;
+  /* Optional: Add a semi-transparent background for better readability */
+  padding: 20px; /* General padding for the overlay text */
+}
 
-html {
-  scroll-behavior: smooth;
+.overlay-text.left {
+  left: 10%; /* Position from the left */
+  text-align: left;
+  padding-left: 20px; /* Add desired left padding */
 }
-section {
-  scroll-margin-top: 100px; /* Adjust based on header height */
+
+.overlay-text.right {
+  right: 10%; /* Position from the right */
+  text-align: right;
+  padding-right: 20px; /* Add desired right padding */
 }
+
+.overlay-text p {
+  color: #ffffff; /* Ensure text is visible on the image */
+  margin: 0;
+  padding: 5px 0;
+  line-height: 1.2; /* Adjusted for better readability */
+}
+
+.line1 {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+}
+
+.line2 {
+  font-size: 60px;
+  font-weight: 550;
+  font-family: 'Alexandria', sans-serif; /* Apply Alexandria font */
+}
+
 /* Responsive Styles for Mobile Devices */
 @media (max-width: 768px) {
   main {
-    padding: 20px; /* Remove padding on mobile */
+    padding: 20px; /* Reduce padding on mobile */
   }
 
-  /* Optional: Adjust main image styles for mobile if necessary */
+  /* Adjust main image styles for mobile if necessary */
   .main-image {
-    border-radius: 5px; /* Example: Less rounded corners on mobile */
+    border-radius: 5px; /* Less rounded corners on mobile */
+    height: 230px;
   }
 
-  /* If you have additional styles specific to mobile, add them here */
+  .overlay-text {
+    position: absolute; /* Keep it absolutely positioned */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    padding: 10px 15px; /* Reduce padding for mobile */
+  }
+
+  .overlay-text.left {
+    left: 10%; /* Maintain left positioning */
+    right: auto; /* Override right positioning */
+    padding-left: 15px; /* Adjust left padding */
+    padding-right: 15px; /* Optional: Add right padding for better appearance */
+  }
+
+  .overlay-text.right {
+    right: 10%; /* Maintain right positioning */
+    left: auto; /* Override left positioning */
+    padding-right: 15px; /* Adjust right padding */
+    padding-left: 15px; /* Optional: Add left padding for better appearance */
+  }
+
+  .overlay-text p {
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .line1 {
+    font-size: 12px; /* Smaller font for mobile */
+  }
+
+  .line2 {
+    font-size: 30px; /* Smaller font for mobile */
+  }
 }

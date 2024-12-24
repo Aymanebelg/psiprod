@@ -4,6 +4,7 @@
     background-color: #000000; /* Black background */
     padding: 50px 50px;
     font-family: 'Alexandria', sans-serif; /* Consistent typography */
+    direction: rtl;
   }
   
   .footer-container {
