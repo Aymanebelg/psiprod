@@ -24,7 +24,12 @@ main {
   height: auto;
   border-radius: 10px; /* Optional: Adds rounded corners */
 }
-
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 100px; /* Adjust based on header height */
+}
 .overlay-text {
   position: absolute;
   top: 50%;
